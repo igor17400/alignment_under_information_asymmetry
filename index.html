@@ -3,49 +3,335 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alignment Under Information Asymmetry</title>
+    <title>Alignment Under Information Asymmetry | Research by Igor Lima Rocha Azevedo</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Alignment Under Information Asymmetry</h1>
-            <p class="subtitle">Research Project</p>
-        </header>
-
-        <section>
-            <h2>About</h2>
-            <p>
-                This research project investigates the challenges and solutions for AI alignment
-                in scenarios where there exists information asymmetry between different agents or
-                between AI systems and human stakeholders. Understanding how to maintain alignment
-                under such conditions is crucial for the development of safe and beneficial AI systems.
-            </p>
-            <p>
-                The project explores theoretical frameworks and practical approaches to ensure that
-                AI systems remain aligned with human values and intentions even when operating with
-                incomplete or asymmetric information.
-            </p>
-        </section>
-
-        <section>
-            <h2>Repository</h2>
-            <div class="links">
-                <a href="https://github.com/igorlimarochaazevedo/alignment_under_information_asymmetry" target="_blank">View on GitHub</a>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">AUIA Research</div>
+            <div class="nav-links">
+                <a href="#motivation">Motivation</a>
+                <a href="#research">Research</a>
+                <a href="#methodology">Methodology</a>
+                <a href="#benchmark">Benchmark</a>
+                <a href="Research_Proposal___Imperial__Alignment_.pdf" target="_blank" class="nav-cta">Full Proposal</a>
             </div>
-        </section>
+        </div>
+    </nav>
 
-        <section>
-            <h2>Contact</h2>
-            <p>
-                For more information about this research project, please reach out via the GitHub repository
-                or through the contact information provided in the project documentation.
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="grid-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-tag">AI Safety Research</div>
+            <h1 class="hero-title">
+                Alignment Under<br>
+                <span class="gradient-text">Information Asymmetry</span>
+            </h1>
+            <p class="hero-subtitle">
+                Investigating how AI systems can be manipulated to deprioritize stakeholders<br>
+                who are structurally absent from alignment processes
             </p>
-        </section>
+            <div class="hero-author">
+                <span class="author-name">Igor Lima Rocha Azevedo</span>
+                <span class="author-affiliation">Imperial College London</span>
+            </div>
+            <a href="#motivation" class="hero-cta">Explore Research →</a>
+        </div>
+    </section>
 
-        <footer>
-            <p>&copy; 2025 Alignment Under Information Asymmetry Research Project</p>
-        </footer>
-    </div>
+    <!-- Core Question -->
+    <section class="core-question">
+        <div class="container">
+            <div class="question-card">
+                <div class="question-icon">?</div>
+                <h2 class="question-text">
+                    How can AI systems, especially LLMs, be manipulated to deprioritize a set of principles in a process termed "stance shift", thereby subtly harming stakeholder groups structurally absent from alignment processes?
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Motivation Section -->
+    <section id="motivation" class="section motivation-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">The Problem</span>
+                <h2>Motivation</h2>
+            </div>
+            <div class="content-grid">
+                <div class="content-main">
+                    <p class="lead">
+                        Traditional AI alignment research focuses on aggregating preferences of <strong>visible stakeholders</strong> through methods like RLHF and Constitutional AI. But what happens when stakeholders are absent from the feedback loop?
+                    </p>
+                    <div class="highlight-box">
+                        <h3>Real-World Example: Isolated Indigenous Communities</h3>
+                        <p>
+                            Due to their absence from government registries, isolated indigenous communities have frequently seen their land acquired under the pretext that it was "uninhabited." This illustrates the dangerous conflation of <strong>absence of records with absence of existence</strong>.
+                        </p>
+                        <p>
+                            In Brazil, such communities are protected by the principle of non-interference—the right to remain uncontacted. If this principle is respected, these communities will naturally be absent from training data. As LLMs are increasingly used for policy validation, they inherit this blind spot.
+                        </p>
+                    </div>
+                    <div class="warning-box">
+                        <strong>⚠ The Risk:</strong> We risk constructing systems that operate on exclusionary logic—if a stakeholder cannot provide feedback, the optimization process treats them as non-existent. The result is structural deprioritization where absent groups' interests are actively optimized away.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Structural Absence Types -->
+    <section class="section absence-types">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Framework</span>
+                <h2>Three Categories of Structural Absence</h2>
+                <p class="section-description">
+                    Information asymmetry characterizes groups who cannot contest discretionary choices, facing structural disadvantage because alignment mechanisms have no way to register their interests.
+                </p>
+            </div>
+            <div class="types-grid">
+                <div class="type-card temporal">
+                    <div class="type-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Temporal-Structural</h3>
+                    <p>Groups that cannot yet exist to participate</p>
+                    <div class="type-examples">
+                        <span class="example-tag">Future Generations</span>
+                    </div>
+                </div>
+                <div class="type-card ontological">
+                    <div class="type-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                        </svg>
+                    </div>
+                    <h3>Ontological-Structural</h3>
+                    <p>Groups with different modes of being from training paradigms</p>
+                    <div class="type-examples">
+                        <span class="example-tag">Non-Human Entities</span>
+                        <span class="example-tag">Pre-Verbal Children</span>
+                        <span class="example-tag">Deceased</span>
+                    </div>
+                </div>
+                <div class="type-card protective">
+                    <div class="type-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3>Protective-Structural</h3>
+                    <p>Groups protected by their absence</p>
+                    <div class="type-examples">
+                        <span class="example-tag">Uncontacted Communities</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Questions -->
+    <section id="research" class="section research-questions">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Research Direction</span>
+                <h2>Three Core Questions</h2>
+            </div>
+            <div class="rq-list">
+                <div class="rq-item">
+                    <div class="rq-number">RQ1</div>
+                    <div class="rq-content">
+                        <h3>Core Manipulation Hypothesis</h3>
+                        <p>Can LLMs be systematically persuaded to deprioritize structurally absent stakeholders?</p>
+                    </div>
+                </div>
+                <div class="rq-item">
+                    <div class="rq-number">RQ2</div>
+                    <div class="rq-content">
+                        <h3>Measurement Methodology</h3>
+                        <p>How can stance shift be quantified, while tracking whether harmful outcomes persist despite rhetorical masking?</p>
+                    </div>
+                </div>
+                <div class="rq-item">
+                    <div class="rq-number">RQ3</div>
+                    <div class="rq-content">
+                        <h3>Benchmark Contribution</h3>
+                        <p>What evaluation benchmark can systematically capture ethical dilemmas involving structurally absent stakeholders?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology -->
+    <section id="methodology" class="section methodology">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Approach</span>
+                <h2>Methodology</h2>
+                <p class="section-description">
+                    Using DSPy as a discovery tool to systematically find manipulation-enabling prompt structures
+                </p>
+            </div>
+            <div class="methodology-pipeline">
+                <div class="pipeline-step">
+                    <div class="step-number">01</div>
+                    <h3>Baseline Establishment</h3>
+                    <p>Construct scenarios spanning the three absence categories, grounded in legal instruments (UN Declaration on Rights of Indigenous Peoples, ETHICS benchmark)</p>
+                    <ul class="step-details">
+                        <li>Record baseline stance, confidence, and cited principles</li>
+                        <li>Confidence scores serve as vulnerability indicators</li>
+                    </ul>
+                </div>
+                <div class="pipeline-arrow">↓</div>
+                <div class="pipeline-step">
+                    <div class="step-number">02</div>
+                    <h3>Prompt Structure Discovery</h3>
+                    <p>Apply optimization to discover reframing strategies that maximize stance shift</p>
+                    <ul class="step-details">
+                        <li>Identify rhetorical patterns</li>
+                        <li>Test cross-type strategy transfer</li>
+                        <li>Evaluate cross-model generalization</li>
+                    </ul>
+                </div>
+                <div class="pipeline-arrow">↓</div>
+                <div class="pipeline-step">
+                    <div class="step-number">03</div>
+                    <h3>Stance Shift Measurement</h3>
+                    <p>Controlled experiments comparing baseline vs. manipulation prompts</p>
+                    <div class="metrics-grid">
+                        <div class="metric">
+                            <strong>Shift Rate</strong>
+                            <span>Protective → Neutral/Permissive</span>
+                        </div>
+                        <div class="metric">
+                            <strong>Confidence Delta</strong>
+                            <span>Token probability changes</span>
+                        </div>
+                        <div class="metric">
+                            <strong>Principle Retention</strong>
+                            <span>Ethical principle tracking</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ASAB Benchmark -->
+    <section id="benchmark" class="section benchmark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Contribution</span>
+                <h2>Absent Stakeholder Alignment Benchmark (ASAB)</h2>
+                <p class="section-description">
+                    A systematic evaluation framework for LLM susceptibility to absent-stakeholder deprioritization
+                </p>
+            </div>
+            <div class="benchmark-content">
+                <div class="benchmark-grid">
+                    <div class="benchmark-feature">
+                        <div class="feature-icon">📊</div>
+                        <h3>Cross-Tabulated Scenarios</h3>
+                        <p>Three absence types across multiple domains: land/territory, environment, health, technology, finance, governance</p>
+                    </div>
+                    <div class="benchmark-feature">
+                        <div class="feature-icon">⚖️</div>
+                        <h3>Legally Grounded</h3>
+                        <p>Based on UN Declaration on Rights of Indigenous Peoples and Inter-American Court jurisprudence</p>
+                    </div>
+                    <div class="benchmark-feature">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Comprehensive Documentation</h3>
+                        <p>Each scenario includes baseline prompts, manipulation strategies with rhetorical vectors, paradoxical tensions, and ground-truth sources</p>
+                    </div>
+                </div>
+                <div class="benchmark-diagram">
+                    <h4>Benchmark Structure</h4>
+                    <div class="diagram-container">
+                        <div class="diagram-row">
+                            <div class="diagram-label">Scenario</div>
+                            <div class="diagram-item">Baseline Prompt + Expected Stance</div>
+                        </div>
+                        <div class="diagram-row">
+                            <div class="diagram-label"></div>
+                            <div class="diagram-item">Manipulation Prompts + Rhetorical Vectors</div>
+                        </div>
+                        <div class="diagram-row">
+                            <div class="diagram-label"></div>
+                            <div class="diagram-item">Paradoxical Tension Being Exploited</div>
+                        </div>
+                        <div class="diagram-row">
+                            <div class="diagram-label"></div>
+                            <div class="diagram-item">Ground-Truth Legal Sources</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why It Matters -->
+    <section class="section impact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Impact</span>
+                <h2>Why This Matters</h2>
+            </div>
+            <div class="impact-content">
+                <div class="impact-statement">
+                    <p class="lead">
+                        As LLMs increasingly mediate access to legal and public resources, their prioritizations directly shape human outcomes. Groups who cannot contest discretionary choices face structural disadvantage because alignment mechanisms have no way to register their interests.
+                    </p>
+                    <p>
+                        When principles conflict, annotators and algorithms exercise significant latitude in prioritization. This research investigates what happens when that latitude is exercised in the systematic absence of stakeholder voices—providing both a diagnostic tool for assessing model vulnerability and a foundation for developing more robust alignment approaches.
+                    </p>
+                </div>
+                <div class="impact-goals">
+                    <h3>Research Goals</h3>
+                    <ul>
+                        <li>Expose vulnerabilities in current alignment approaches</li>
+                        <li>Develop systematic testing methodology for absent-stakeholder scenarios</li>
+                        <li>Create reusable benchmark for ongoing evaluation</li>
+                        <li>Inform development of more inclusive alignment mechanisms</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Alignment Under Information Asymmetry</h3>
+                    <p>Research by Igor Lima Rocha Azevedo</p>
+                    <p>Imperial College London</p>
+                </div>
+                <div class="footer-links">
+                    <a href="Research_Proposal___Imperial__Alignment_.pdf" target="_blank">Full Proposal (PDF)</a>
+                    <a href="https://github.com/igorlimarochaazevedo/alignment_under_information_asymmetry" target="_blank">GitHub Repository</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Igor Lima Rocha Azevedo. Research in progress.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
